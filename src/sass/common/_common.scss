@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+/* Layout */
+
+html{
+	-ms-text-size-adjust: 100%;
+ 	-webkit-text-size-adjust: 100%;
+ 	-moz-text-size-adjust: 100%;
+	font-size:x-small;
+}
+
+body{
+	margin: 0;
+  @extend %bodyCopy;
+  color: $tsl-03;
+	position:relative;
+  overflow-y:visible;
+  padding:0;
+  font-size:1.6rem;
+  position: relative;
+
+  background:$tsl-01-op8;
+}
+
+a{
+	color:$tsl-03;
+  text-decoration:underline;
+
+  &:hover{
+    color:$tsl-04;
+  }
+}
+ul{
+  padding:0;
+  margin:0;
+}
+img{
+  border:none;
+}
+
+h1{
+	font-size:3rem;
+}
+h2{
+	font-size:2rem;
+}
+
+@media (map-get($rd-types, md)){
+  h1{
+    font-size:4rem;
+  }
+  h2{
+    font-size:3rem;
+  }
+}

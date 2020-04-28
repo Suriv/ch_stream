@@ -1,0 +1,33 @@
+
+// Colors
+$tsl-01: #000;
+$tsl-02: #222;
+$tsl-03: #FFF;
+$tsl-04: #EEEEEE;
+$tsl-05: #FA0000;
+$tsl-06: #4E7490;
+//Opacity
+$tsl-01-op6: rgba(0, 0, 0,.6);
+$tsl-01-op8: rgba(0, 0, 0,.8);
+$tsl-03-op3: rgba(255, 255, 255,.3);
+$tsl-06-op8: rgba(78, 116, 144,.8);
+
+
+//Responsive configuration
+
+$mobile: 320px; // Phone portrait minimum
+$mobile-landscape: 480px; // Phone landscape minimum
+$tablet: 768px; // Tablet portrait minimum
+$desktop: 992px; // Laptop+Desktop minimum
+$large-desktop: 1200px; // Large screen minimum
+
+$rd-types:	(
+	xs:'min-width: #{$mobile}',
+	sm:'min-width: #{$mobile-landscape}',
+	md:'min-width: #{$tablet}',
+  lg:'min-width: #{$desktop}',
+  xl:'min-width: #{$large-desktop}'
+)!default; // Responsive configuration
+
+
+$hundred:	100%;

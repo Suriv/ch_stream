@@ -1,0 +1,14 @@
+@charset "UTF-8";
+article{
+  position: relative;
+  z-index:2;
+}
+
+section{
+  padding:2rem 1rem;
+  text-align:center;
+  @media (map-get($rd-types, md)){}
+  @media (map-get($rd-types, lg)){}
+}
+
+

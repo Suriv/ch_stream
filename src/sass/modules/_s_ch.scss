@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+.s_ch {
+  padding:2rem 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.pexels.com/photos/1888883/pexels-photo-1888883.jpeg?cs=srgb&dl=abstracto-acero-inoxidable-arquitectura-artistico-1888883.jpg&fm=jpg') repeat;
+  background-size:content;
+
+  &::before{
+    content:'';
+    width:100%;
+    height:100%;
+    display:block;
+    position: absolute;
+    top:0;
+    z-index:1;
+    background:$tsl-01-op8;
+  }
+
+
+
+
+  section, h1{
+    position: relative;
+    z-index:2;
+  }
+  section
+  {
+    width:100%;
+    margin:auto;
+  }
+  h1{
+    margin:0 auto 2rem auto;
+    text-align:center;
+    width:100%;
+  }
+  h2{
+    display:inline-block;
+
+    cursor: pointer;
+    user-select: none;
+    &.open{
+      margin:0 auto 2rem auto;
+    }
+  }
+  ul
+  {
+    display:none;
+    flex-wrap: wrap;
+    width:95%;
+    margin:0 auto;
+    &.visible{
+      display:flex;
+    }
+    li{
+        display:block;
+        border-radius:0.5rem  0  0.5rem 0;
+        height:18rem;
+        width:100%;
+        margin:0 0 2rem 0;
+        border:0.1rem solid $tsl-03-op3;
+        position:relative;
+
+        img{
+          object-fit: contain;
+          height:18rem;
+          width:100%;
+        }
+        span
+        {
+          display:flex;
+          justify-content:space-between;
+          position:absolute;
+          bottom:1rem;
+          width:100%;
+          a{
+            display:block;
+            margin:0;
+            width:48%;
+            padding:1rem;
+            font-size:1.6rem;
+            background:$tsl-06-op8;
+            box-shadow: inset 25px -25px 75px #344e60,
+            inset -25px 25px 75px #689ac0;
+            text-decoration:none;
+            color:$tsl-04;
+            border-radius: 0 12rem 12rem 0;
+            text-shadow: -1px 1px 2px $tsl-02;
+            &:last-child{
+              border-radius: 12rem 0 0 12rem;
+            }
+
+            &:only-of-type{
+              width:80%;
+              border-radius:12rem;
+              background:$tsl-06-op8;
+              margin:0 auto;
+            }
+          }
+        }
+
+    }
+  }
+  @media (map-get($rd-types, md)){
+    h1{
+      width:50%;
+    }
+    ul{
+      width:98%;
+      li{
+        width: 24%;
+        margin: 0 auto 2rem auto;
+      }
+    }
+  }
+}

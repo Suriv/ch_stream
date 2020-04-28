@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+
+
+
+@mixin expand($name,$value){
+	-moz-#{$name}: $value;
+	-webkit-#{$name}: $value;
+	-o-#{$name}: $value;
+	-ms-#{$name}: $value;
+	#{$name}: $value;
+}
+
+@mixin clearfix(){
+  &:after{
+	clear: both; content: "."; display: block; height: 0; visibility: hidden;
+  }
+}
+
+
+@mixin font-face($font-family, $font-url, $font-name) {
+  @font-face {
+	font: {family: $font-family;}
+	src: url('../'+$font-url + '/' + $font-name + '.woff') format('woff');
+  }
+}
+
+
+@mixin disabled(){
+	cursor:default;
+    pointer-events: none;
+    user-select: none;
+    opacity:.5;
+}
