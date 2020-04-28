@@ -1,4 +1,9 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
+### Project specific config ###
+language: node_js
+node_js:
+  - "12.13.1"
+before_script:
+  - npm install grunt-cli -g
+branches:
+  only:
+    - master
